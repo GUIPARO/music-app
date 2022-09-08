@@ -1,0 +1,16 @@
+
+  <h2>List of Artists</h2>
+  <div>
+    <% @artists.each do |artist| %>
+      <div>
+        <div>
+          <img src=<%= artist.image_url  %> alt=<%= artist.name %>, style ="width:150px;">
+          <div>
+            <h5><%= artist.name.upcase %></h5>
+            <%= link_to "ver mas", artist_path(artist)%>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
